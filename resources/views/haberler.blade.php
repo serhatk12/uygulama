@@ -5,98 +5,38 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-image">
-                        <img class="img-responsive" src="http://placehold.it/500x500">
-                    </div><!-- card image -->
+            <?php
+            $i=0;
+            ?>
+            @foreach($haberler as $haber)
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img class="img-responsive" src="http://placehold.it/500x500">
 
-                    <div class="card-content">
-                        <h4 class="card-title">Tim Cook</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-function">CEO, ZDA</p>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="javascript:void(0)" class="btn-show" data-rel="1">READ MORE</a>
-                            </div>
-                        </div>
+                        </div><!-- card image -->
 
-                    </div><!-- card content -->
-                    <div class="card-reveal" data-rel="1">
-                        <button type="button" class="close" data-rel="1" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">×</span></button>
-                        <div class="tabbable tabs-below">
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="one_">Lorem ipsum dolor sit amet, charetra varius quam
-                                    sit amet vulputate.
-                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
+                        <div class="card-content">
+                            <h4 class="card-title">{{$haber->baslik}}</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="card-function">{{$haber->user_id}}</p>
                                 </div>
-                                <div class="tab-pane" id="two_">Secondo sed ac orci quis tortor imperdiet venenatis.
-                                    Duis elementum auctor accumsan.
-                                    Aliquam in felis sit amet augue.
+                                <div class="col-md-6">
+                                    <a href="javascript:void(0)" class="btn-show" data-rel="2">Haberi Oku</a>
                                 </div>
                             </div>
-                            <ul class="nav nav-tabs">
-                                <li><a href="#one_" data-toggle="tab">Več o predavatelju</a></li>
-                                <li><a href="#two_" data-toggle="tab">Več o predavanju</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- card reveal -->
+                        </div><!-- card content -->
+                        <div class="card-reveal" data-rel="2">
+                            <button type="button" class="close" data-rel="<?=$i;?>" data-dismiss="modal"
+                                    aria-label="Close"><span
+                                        aria-hidden="true">×</span></button>
+                            <p>{{$haber->aciklama}}</p>
+                        </div><!-- card reveal -->
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-image">
-                        <img class="img-responsive" src="http://placehold.it/500x500">
-
-                    </div><!-- card image -->
-
-                    <div class="card-content">
-                        <h4 class="card-title">Material Cards</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-function">Material Cards</p>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="javascript:void(0)" class="btn-show" data-rel="2">READ MORE</a>
-                            </div>
-                        </div>
-                    </div><!-- card content -->
-                    <div class="card-reveal" data-rel="2">
-                        <button type="button" class="close" data-rel="2" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">×</span></button>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div><!-- card reveal -->
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-image">
-                        <img class="img-responsive" src="http://placehold.it/500x500">
-
-                    </div><!-- card image -->
-
-                    <div class="card-content">
-                        <h4 class="card-title">Material Cards</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="card-function">Material Cards</p>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="javascript:void(0)" class="btn-show" data-rel="3">READ MORE</a>
-                            </div>
-                        </div>
-                    </div><!-- card content -->
-                    <div class="card-reveal" data-rel="3">
-                        <button type="button" class="close" data-rel="3" data-dismiss="modal" aria-label="Close"><span
-                                    aria-hidden="true">×</span></button>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                    </div><!-- card reveal -->
-                </div>
-            </div>
+                <?php $i++;?>
+            @endforeach
         </div>
     </div>
 

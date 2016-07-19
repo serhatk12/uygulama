@@ -19,3 +19,8 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/haberler', 'HaberController@index');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/haber-ekle', 'HaberController@haber_ekle');
+    Route::post('/haber-ekle', 'HaberController@haber_kaydet');
+});
+
