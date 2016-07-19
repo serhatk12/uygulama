@@ -23,15 +23,19 @@
                                     <p class="card-function">{{$haber->user_id}}</p>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="javascript:void(0)" class="btn-show" data-rel="2">Haberi Oku</a>
+                                    <a href="javascript:void(0)" class="btn-show" data-rel="<?=$i;?>">Haberi Oku</a>
                                 </div>
                             </div>
                         </div><!-- card content -->
-                        <div class="card-reveal" data-rel="2">
+                        <div class="card-reveal" data-rel="<?=$i;?>">
                             <button type="button" class="close" data-rel="<?=$i;?>" data-dismiss="modal"
                                     aria-label="Close"><span
                                         aria-hidden="true">×</span></button>
-                            <p>{{$haber->aciklama}}</p>
+                            <p>
+                                {{$haber->aciklama}}
+                                <a href="/haber-icerik/sadsa"> Haberin Devamı..</a>
+                            </p>
+
                         </div><!-- card reveal -->
                     </div>
                 </div>
