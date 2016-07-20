@@ -19,8 +19,12 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/haberler', 'HaberController@index');
+Route::get('/haber-icerik/{slug}', 'HaberController@haber_detay');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/haber-ekle', 'HaberController@haber_ekle');
     Route::post('/haber-ekle', 'HaberController@haber_kaydet');
+    Route::get('/haberlerim', 'HaberController@haberlerim');
+    Route::get('/haber-duzenle/{slug}', 'HaberController@haber_duzenle');
+    Route::post('/haber-duzenle/{slug}', 'HaberController@haber_duzenleme');
 });
 

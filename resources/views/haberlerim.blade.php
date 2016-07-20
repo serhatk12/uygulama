@@ -5,8 +5,23 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    @if(count($haberler)>0)
+                        <div class="panel-heading">{{Auth::user()->name}} ' in Haberleri</div>
+                    @else
+                        <div class="panel-heading">Şuan Hiç Haberiniz Yok </div>
+                    @endif
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
             <?php
-            $i=0;
+            $i = 0;
             ?>
             @foreach($haberler as $haber)
                 <div class="col-sm-4">
@@ -33,7 +48,7 @@
                                         aria-hidden="true">×</span></button>
                             <p>
                                 {{$haber->aciklama}}
-                                <a href="/haber-icerik/{{$haber->slug}}"> Haberin Devamı..</a>
+                                <a href="/haber-duzenle/{{$haber->slug}}"> Haberi Düzenle</a>
                             </p>
 
                         </div><!-- card reveal -->
