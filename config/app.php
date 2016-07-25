@@ -159,6 +159,7 @@ return [
          * Kendi classlarımız
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
 
     ],
 
@@ -209,7 +210,7 @@ return [
          * Kendi classlarımız
          */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
+        'HTMLMin' => GrahamCampbell\HTMLMin\Facades\HTMLMin::class,
     ],
 
 ];

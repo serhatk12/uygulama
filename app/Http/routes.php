@@ -26,5 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/haberlerim', 'HaberController@haberlerim');
     Route::get('/haber-duzenle/{slug}', 'HaberController@haber_duzenle');
     Route::post('/haber-duzenle/{slug}', 'HaberController@haber_duzenleme');
+    Route::get('/admin/dashboard', 'AdminController@index');
+    Route::get('/admin/blog/blog-ekle', 'AdminController@get_blogEkle');
 });
 
