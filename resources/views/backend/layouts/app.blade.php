@@ -12,16 +12,18 @@
     <title>@section('title') Kare-Code Admin Dashboard @show</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{asset('backend')}}/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    {!! Minify::stylesheet('/backend/bower_components/bootstrap/dist/css/bootstrap.min.css') !!}
+
 
     <!-- MetisMenu CSS -->
-    <link href="{{asset('backend')}}/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    {!! Minify::stylesheet('/backend/bower_components/metisMenu/dist/metisMenu.min.css') !!}
 
     <!-- Custom CSS -->
-    <link href="{{asset('backend')}}/dist/css/sb-admin-2.css" rel="stylesheet">
+    {!! Minify::stylesheet('/backend/dist/css/sb-admin-2.css') !!}
 
     <!-- Custom Fonts -->
-    <link href="{{asset('backend')}}/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    {!! Minify::stylesheet('/backend/bower_components/font-awesome/css/font-awesome.min.css') !!}
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -379,16 +381,19 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('backend')}}/bower_components/jquery/dist/jquery.min.js"></script>
+{!! Minify::javascript('/backend/bower_components/jquery/dist/jquery.min.js') !!}
+
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{asset('backend')}}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+{!! Minify::javascript('/backend/bower_components/bootstrap/dist/js/bootstrap.min.js') !!}
+
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="{{asset('backend')}}/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+{!! Minify::javascript('/backend/bower_components/metisMenu/dist/metisMenu.min.js') !!}
 
 <!-- Custom Theme JavaScript -->
-<script src="{{asset('backend')}}/dist/js/sb-admin-2.js"></script>
+{!! Minify::javascript('/backend/dist/js/sb-admin-2.js') !!}
+
 
 @yield('js')
 

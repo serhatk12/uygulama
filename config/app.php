@@ -160,6 +160,7 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
         GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
+        Devfactory\Minify\MinifyServiceProvider::class,
 
     ],
 
@@ -211,6 +212,7 @@ return [
          */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'HTMLMin' => GrahamCampbell\HTMLMin\Facades\HTMLMin::class,
+        'Minify'  => Devfactory\Minify\Facades\MinifyFacade::class,
     ],
 
 ];

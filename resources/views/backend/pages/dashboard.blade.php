@@ -578,16 +578,18 @@
 
 @section('css')
     <!-- Timeline CSS -->
-    <link href="{{asset('backend')}}/dist/css/timeline.css" rel="stylesheet">
+    {!! Minify::stylesheet('/backend/dist/css/timeline.css') !!}
 
     <!-- Morris Charts CSS -->
-    <link href="{{asset('backend')}}/bower_components/morrisjs/morris.css" rel="stylesheet">
+    {!! Minify::stylesheet('/backend/bower_components/morrisjs/morris.css') !!}
+
 @endsection
 
 @section('js')
     <!-- Morris Charts JavaScript -->
-    <script src="{{asset('backend')}}/bower_components/raphael/raphael-min.js"></script>
-    <script src="{{asset('backend')}}/bower_components/morrisjs/morris.min.js"></script>
-    <script src="{{asset('backend')}}/js/morris-data.js"></script>
+    {!! Minify::javascript('/backend/bower_components/raphael/raphael-min.js') !!}
+    {!! Minify::javascript('/backend/bower_components/morrisjs/morris.min.js') !!}
+    {!! Minify::javascript('/backend/js/morris-data.js') !!}
+
 
 @stop
